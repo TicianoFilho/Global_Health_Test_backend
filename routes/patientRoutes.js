@@ -61,6 +61,7 @@ router.patch('/:id', async (req, res) => {
         const updatedPatient = await Patient.updateOne({_id : id}, patient)
         if (updatedPatient.matchedCount === 0) {
             res.status(422).json({message: 'Paciente não encontrado.'})
+            return
         }
         res.status(200).json({patient})
     } catch (error) {
