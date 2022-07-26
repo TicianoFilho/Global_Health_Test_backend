@@ -1,6 +1,34 @@
 const Patient = require('../models/Patient')
 const router = require('express').Router()
 
+/**
+ * @swagger
+ * components:
+ *    schemas:
+ *       Patient:
+ *          type: object
+ *          required: 
+ *              - name
+ *          properties:
+ *              name:
+ *                  type: String
+ *                  description: The name of the patient
+ *              healthInsuranceCardId:
+ *                  type: Number
+ *                  description: The id of the patient's health insurance card
+ *              address:
+ *                  type: String
+ *                  description: The patient's address
+ *              createdAt:
+ *                  type: Date
+ *                  description: the date the information was saved
+ *              examples: 
+ *                  name: Ticiano Filho
+ *                  healthInsuranceCardId: 123456789
+ *                  address: Rua Luíz de Castro, 1182
+ *                  createdAt: 2022-07-26
+ */
+
 //salva paciente
 router.post('/', async (req, res) => {
     const {name, healthIsuranceCardId, address, createdAt} = req.body
@@ -10,6 +38,11 @@ router.post('/', async (req, res) => {
         healthIsuranceCardId,
         address,
         createdAt
+    }
+
+    if (!name) {
+        res.status(422).json({message: 'O nome é obrigatório.'})
+        return
     }
 
     try {
