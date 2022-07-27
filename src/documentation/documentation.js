@@ -48,7 +48,10 @@
  *                          type: array
  *                          items:
  *                              $ref: '#/components/schemas/Patient'
+ *          400:
+ *              description: Bad request
  */
+
 /**
  * @swagger
  * /patients/{id}:
@@ -72,6 +75,61 @@
  *          500:
  *              description: Some server error.
  */
+
+/**
+ * @swagger
+ * /patients/recover/{id}:
+ *    get:
+ *      summary: Recover the Patient
+ *      tags: [Patients]
+ *      parameters:
+ *        - in: path
+ *          name: id
+ *          schema:
+ *              type: string
+ *          required: true
+ *          description: The patient id
+ *      responses:
+ *          200:
+ *              description: The patient iformation by id
+ *              contents:
+ *                  application/json:
+ *                      schema:
+ *                          $ref: '#/components/schemas/Patient'
+ *          404:
+ *              description: Patient not found
+ *          400:
+ *              description: Bad request
+ */
+
+/**
+ * @swagger
+ * /patients/{id}:
+ *    patch:
+ *      summary: Update the patient by the id
+ *      tags: [Patients]
+ *      parameters:
+ *        - in: path
+ *          name: id
+ *          schema:
+ *              type: String
+ *          required: true
+ *          description: The patient id
+ *      requestBody:
+ *          required: true
+ *          content:
+ *              application/json:
+ *                  schema:
+ *                      $ref: '#/components/schemas/Patient'
+ *      responses:
+ *          200:
+ *              description: The patient was updated
+ *          404:
+ *              description: Patient not found
+ *          400:
+ *              description: Bad request
+ */
+
 /**
  * @swagger
  * /patients:
@@ -91,8 +149,51 @@
  *                  application/json:
  *                      schema:
  *                          $ref: '#/components/schemas/Patient'
- *          500:
- *              description: Some server error.
+ *          400:
+ *             description: Bad request
  *
- *
+ */
+
+/**
+ * @swagger
+ * /patients/{id}:
+ *    delete:
+ *      summary: Remove permanently the patient by id
+ *      tags: [Patients]
+ *      parameters:
+ *        - in: path
+ *          name: id
+ *          schema:
+ *              type: String
+ *          required: true
+ *          description: the patient id
+ *      responses:
+ *          200:
+ *              description: The patient was deleted permanently
+ *          404:
+ *              description: Patient not found
+ *          400:
+ *              description: Bad request
+ */
+
+/**
+ * @swagger
+ * /patients/file/{id}:
+ *    delete:
+ *      summary: Remove the patient by id
+ *      tags: [Patients]
+ *      parameters:
+ *        - in: path
+ *          name: id
+ *          schema:
+ *              type: String
+ *          required: true
+ *          description: the patient id
+ *      responses:
+ *          200:
+ *              description: The patient was deleted permanently
+ *          404:
+ *              description: Patient not found
+ *          400:
+ *              description: Bad request
  */
