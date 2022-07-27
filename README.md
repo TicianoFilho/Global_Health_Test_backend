@@ -2,7 +2,7 @@
 
 Bem-vindo(a).
 
-Olá, como vai?! Meu nome é Taciano e estou participando do processo seletivo da `MV`.
+Olá, como vai?! Meu nome é Ticiano e estou participando do processo seletivo da `MV`.
 Venho por meio deste repositorio entregar a aplicação `back-end` do desafio. Espero que você goste!
 
 Vamos ao projeto!! 🚀
