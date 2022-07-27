@@ -24,9 +24,7 @@ Construir uma `API REST` que permita recuperar, criar, atualizar e excluir dados
 ## 📥 download
 
 Antes de começar, você precisará ter as seguintes ferramentas instaladas em sua máquina:
-[Git](https://git-scm.com), [JDK17](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html) este projeto usa ***Java 17*** e [Maven](https://maven.apache.org/install.html), o uso do drive do [PostgreSQL](https://www.postgresql.org/download/) também será necessário. Além disso, é bom ter um editor para trabalhar com código como [VSCode](https://code.visualstudio.com/). 
-
-Neste projeto também está sendo utilizado o [Docker](https://www.docker.com/), se opite a utilização do mesmo não será necessário a instalação do banco de dados ***PostgreSQL***.
+[Git](https://git-scm.com), [NodeJs](https://nodejs.org/en/) este projeto usa ***Node 16***, o uso do banco [MongoDB](https://www.mongodb.com/try/download/community) também será necessário. Além disso, é bom ter um editor para trabalhar com código como [VSCode](https://code.visualstudio.com/). 
 
 
 ### 💻 setup
